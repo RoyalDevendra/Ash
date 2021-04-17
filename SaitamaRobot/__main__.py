@@ -52,24 +52,27 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot with some fun extras ;)
-You can find the list of available commands with /help
+Hi *{}*, my name is *{}*!
+ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇғғɪᴄɪᴇɴᴛʟʏ, ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ. 
+*Made & Maintained by* [Divyansh 🇮🇳](t.me/divyansh_choudhary)
+**Updates Channel📣**: [Click here](t.me/igroupzoid) 
+Click /help to find out more about how to use me.
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a part of Pokemon
-Have a look at the following for an idea of some of the things I can help you with.
-
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-
+Version :- *v2.0.1*
+Group Management Bot with advanced features. 
+💠*Main* commands available:
+🔸- /start: start the bot
+🔹- /help: PM's you this message.
+🔸- /help <module name>: PM's you info about that module.
+🔹- /donate: information about how to donate!
+🔸- /settings:
+   - in PM: will send you your settings for all supported modules.
+   - in a group: will redirect you to pm, with all that chat's settings.
+   
+Please note that this is the 2.0 version of @GroupZoidBot
 
 {}
 And the following:
@@ -80,9 +83,8 @@ And the following:
 SAITAMA_IMG = "https://telegra.ph/file/2bbe6208b097878d44d26.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+I'm not accepting any donations right now, still, if needed, donate to [Divyansh 🇮🇳](https://t.me/Divyansh_Choudhary).\n
+You can show your support by; [PayPal](paypal.me/TheDivyanshChoudhary)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -168,7 +170,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id, HELPABLE[mod].__help__,
                     InlineKeyboardMarkup([[
                         InlineKeyboardButton(
-                            text="Back", callback_data="help_back")
+                            text="🚶Back", callback_data="help_back")
                     ]]))
             elif args[0].lower() == "markdownhelp":
                 IMPORTED["extras"].markdown_help_sender(update)
@@ -200,7 +202,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="🧲Add Ash Ketchum to your group!",
+                            text="➕Add me to a Group➕",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -210,17 +212,12 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔Updates Channel",
-                             url="https://t.me/BotLabUpdates")
+                             url="https://t.me/iGroupZoid")
                      ],
                      [
                          InlineKeyboardButton(
                              text="📖 Getting Started Guide",
-                             url="https://t.me/BotLabUpdates/3")
-                     ],
-                     [
-                         InlineKeyboardButton(
-                             text="💾 Source Code.",
-                             url="https://github.com/Uday0011/Ash")
+                             url="https://telegra.ph/Getting-Started-Guide-04-17")
                      ]]))
     else:
         update.effective_message.reply_text(
@@ -410,7 +407,7 @@ def settings_button(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back",
+                        text="🚶Back",
                         callback_data="stngs_back({})".format(chat_id))
                 ]]))
 
