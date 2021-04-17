@@ -53,9 +53,9 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hi *{}*, my name is *{}*!
-ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇғғɪᴄɪᴇɴᴛʟʏ, ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ. 
+ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇғғɪᴄɪᴇɴᴛʟʏ, ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ. \n
 *Made & Maintained by* [Divyansh 🇮🇳](t.me/divyansh_choudhary)
-**Updates Channel📣**: [Click here](t.me/igroupzoid) 
+**Updates Channel📣**: [Click here](t.me/igroupzoid) \n\n
 Click /help to find out more about how to use me.
 """
 
